@@ -3,15 +3,54 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1700.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIs", "UIs", "{AC063B5F-D9C6-4699-B85E-4C4A3F916533}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyCafeConsoleApp", "MyCafeConsoleApp", "{11EC2397-AFC2-4CC1-B8F1-D23F3B1A6E27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A9F3985E-4266-4E0B-8BE5-DE89925FBC90}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{62960A65-10FD-4504-827F-D44501437E01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{C87A457A-D4AD-4455-B771-EEA3100351AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCafeDAL", "MyCafeDAL\MyCafeDAL.csproj", "{20804734-893F-4FC4-8B8D-D07095BF996F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyCafeMVCApp", "MyCafeMVCApp", "{D4E4F40C-9E10-48C4-897D-FE00379A7CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCafeApp", "MyCafeApp\MyCafeApp.csproj", "{1BF4D020-64AA-49D9-93FC-34AE99F5AD4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCafeMVCApp", "MyCafeMVCApp\MyCafeMVCApp.csproj", "{F7B36D5D-DC9C-46DA-9526-6F91EA511536}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20804734-893F-4FC4-8B8D-D07095BF996F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20804734-893F-4FC4-8B8D-D07095BF996F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20804734-893F-4FC4-8B8D-D07095BF996F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20804734-893F-4FC4-8B8D-D07095BF996F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BF4D020-64AA-49D9-93FC-34AE99F5AD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF4D020-64AA-49D9-93FC-34AE99F5AD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF4D020-64AA-49D9-93FC-34AE99F5AD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF4D020-64AA-49D9-93FC-34AE99F5AD4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B36D5D-DC9C-46DA-9526-6F91EA511536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B36D5D-DC9C-46DA-9526-6F91EA511536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B36D5D-DC9C-46DA-9526-6F91EA511536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B36D5D-DC9C-46DA-9526-6F91EA511536}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BED7B2E4-3221-46F6-9A45-947DD432743D}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{11EC2397-AFC2-4CC1-B8F1-D23F3B1A6E27} = {AC063B5F-D9C6-4699-B85E-4C4A3F916533}
+		{20804734-893F-4FC4-8B8D-D07095BF996F} = {C87A457A-D4AD-4455-B771-EEA3100351AA}
+		{D4E4F40C-9E10-48C4-897D-FE00379A7CA2} = {AC063B5F-D9C6-4699-B85E-4C4A3F916533}
+		{1BF4D020-64AA-49D9-93FC-34AE99F5AD4D} = {11EC2397-AFC2-4CC1-B8F1-D23F3B1A6E27}
+		{F7B36D5D-DC9C-46DA-9526-6F91EA511536} = {D4E4F40C-9E10-48C4-897D-FE00379A7CA2}
 	EndGlobalSection
 EndGlobal
