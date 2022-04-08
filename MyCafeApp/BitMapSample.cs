@@ -6,6 +6,8 @@ namespace MyCafeApp
 		public BitMapSample()
 		{
 		}
+
+		
 	}
 }
 

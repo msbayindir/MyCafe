@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MyCafeApp;
 
+
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MyCafeMVCApp.Controllers
 {
 
+
     public class ImageController : Controller
     {
 
+
         public async Task<ActionResult> ImageSef()
         {
-
+            
 
             var a = new ImageConsole();
             byte[] photoBack = a.imageConversion("/Users/muhammedbayindir/desktop/Deneme.png");
