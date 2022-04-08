@@ -1,6 +1,7 @@
-﻿namespace MyCafeDAL;
+﻿
+namespace MyCafeDAL;
 public class Class1
 {
-
+     
 }
 
