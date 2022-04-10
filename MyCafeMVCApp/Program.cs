@@ -38,7 +38,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Image}/{action=ImageSef}/{id?}");
 app.MapRazorPages();
 
 app.Run();

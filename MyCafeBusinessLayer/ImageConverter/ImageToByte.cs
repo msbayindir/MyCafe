@@ -1,13 +1,9 @@
 ﻿using System;
-using System.IO;
-
-
-namespace MyCafeApp
+namespace MyCafeBusinessLayer.ImageConverter
 {
-	public class ImageConsole
+	public class ImageToByte
 	{
-
-        public byte[] imageConversion(string imageName)
+        public byte[] ImageConversion(string imageName)
         {
 
 
@@ -24,8 +20,7 @@ namespace MyCafeApp
             fs.Close();
 
             return imgByteArr;
-    }
-
+        }
     }
 }
 

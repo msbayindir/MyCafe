@@ -9,5 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyCafeDAL\MyCafeDAL.csproj" />
+    <ProjectReference Include="..\MyCafeBusinessLayer\MyCafeBusinessLayer.csproj" />
   </ItemGroup>
 </Project>
