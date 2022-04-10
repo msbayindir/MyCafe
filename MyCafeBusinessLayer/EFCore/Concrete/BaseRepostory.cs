@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using MyCafeBusinessLayer.EFCore.Abstract;
 
@@ -6,8 +8,8 @@ using MyCafeBusinessLayer.EFCore.Abstract;
 namespace MyCafeBusinessLayer.EFCore.Concrete
 {
 	public class BaseRepostory<T>:IEntityRepostory<T>
-        
-	{
+        where T : class, new()
+    {
 		public BaseRepostory()
 		{
 		}
@@ -23,13 +25,26 @@ namespace MyCafeBusinessLayer.EFCore.Concrete
         
         public List<T> GetAll()
         {
-            throw new NotImplementedException();
+            using (var _context = new MyCafeDbContext())
+            {
+                return _context.Set<T>().ToList();
+            }
         }
 
-        public T GetSingle(T entity)
+        public T GetSingle(Expression<Func<T, bool>> filter)
         {
-            throw new NotImplementedException();
+            using (var _context = new MyCafeDbContext())
+            {
+                return _context.Set<T>().SingleOrDefault(filter);
+            }
         }
+        //public T GetSingle(T entity)
+        //{
+        //    using (var _context = new MyCafeDbContext())
+        //    {
+        //        return _context.Set<T>().T
+        //    }
+        //}
     }
 }
 

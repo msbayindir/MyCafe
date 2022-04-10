@@ -32,5 +32,8 @@
     <ProjectReference Include="..\MyCafeDAL\MyCafeDAL.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\MyCafeBusinessLayer\MyCafeBusinessLayer.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>
