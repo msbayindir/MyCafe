@@ -1,7 +1,25 @@
-﻿@page
-@{
-}
+﻿@model List<MyCafeDAL.Entities.Product>
 
-<h1>Merhaba</h1>
 
-<img src="@ViewBag.ImageData">  
+
+
+<div class="gallery">
+    <div class="gallery__item">
+        <div class="embed">
+
+            @foreach (var item in Model)
+            {
+                <h1>@item.Id</h1>
+                <h1>@item.Price</h1>
+                <h1>@item.ProductName</h1>
+
+
+                <img src="@item.ByteToImage(item.ProductImage)" >
+
+
+            }
+
+        </div>
+    </div>
+    
+</div>

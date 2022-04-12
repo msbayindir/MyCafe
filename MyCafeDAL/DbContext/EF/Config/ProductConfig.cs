@@ -12,6 +12,7 @@ namespace MyCafeDAL.Concrete.EF.Config
         public void Configure(EntityTypeBuilder<Product> builder)
         {
             builder.HasKey(p => p.Id);
+           
 
         }
     }

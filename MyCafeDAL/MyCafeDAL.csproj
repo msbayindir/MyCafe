@@ -12,12 +12,14 @@
     <None Remove="DbContext\" />
     <None Remove="DbContext\EF\" />
     <None Remove="DbContext\EF\Config\" />
+    <None Remove="ImageConverter\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="DbContext\" />
     <Folder Include="DbContext\EF\" />
     <Folder Include="DbContext\EF\Config\" />
+    <Folder Include="ImageConverter\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />

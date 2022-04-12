@@ -1,5 +1,6 @@
 ﻿using System;
 using MyCafeBusinessLayer.EFCore.Abstract;
+
 using MyCafeDAL.Entities;
 
 namespace MyCafeBusinessLayer.EFCore.Concrete
@@ -9,6 +10,8 @@ namespace MyCafeBusinessLayer.EFCore.Concrete
 		public ProductDal()
 		{
 		}
-	}
+
+       
+    }
 }
 

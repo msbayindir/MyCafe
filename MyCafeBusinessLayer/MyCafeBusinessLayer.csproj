@@ -10,13 +10,11 @@
     <None Remove="EFCore\" />
     <None Remove="EFCore\Abstract\" />
     <None Remove="EFCore\Concrete\" />
-    <None Remove="ImageConverter\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EFCore\" />
     <Folder Include="EFCore\Abstract\" />
     <Folder Include="EFCore\Concrete\" />
-    <Folder Include="ImageConverter\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyCafeDAL\MyCafeDAL.csproj" />
