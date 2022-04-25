@@ -7,16 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="EFCore\" />
-    <None Remove="EFCore\Abstract\" />
-    <None Remove="EFCore\Concrete\" />
+    <None Remove="Extensions\" />
+    <None Remove="DependencyResolvers\Microsoft\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EFCore\" />
-    <Folder Include="EFCore\Abstract\" />
-    <Folder Include="EFCore\Concrete\" />
+    <Folder Include="DependencyResolvers\" />
+    <Folder Include="DependencyResolvers\Microsoft\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyCafeDAL\MyCafeDAL.csproj" />
+    <ProjectReference Include="..\MyCafe.Dtos\MyCafe.Dtos.csproj" />
   </ItemGroup>
 </Project>
