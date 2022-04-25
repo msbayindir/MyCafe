@@ -9,10 +9,14 @@
   <ItemGroup>
     <None Remove="Extensions\" />
     <None Remove="DependencyResolvers\Microsoft\" />
+    <None Remove="Services\" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DependencyResolvers\" />
     <Folder Include="DependencyResolvers\Microsoft\" />
+    <Folder Include="Services\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyCafeDAL\MyCafeDAL.csproj" />

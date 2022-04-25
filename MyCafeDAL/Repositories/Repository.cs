@@ -41,7 +41,7 @@ namespace MyCafeDAL.Repositories
 
         public IQueryable<T> GetQuery()
         {
-            throw new NotImplementedException();
+            return _myCafeDbContext.Set<T>().AsQueryable();
         }
 
         public async Task<T> GetSingle(object id)

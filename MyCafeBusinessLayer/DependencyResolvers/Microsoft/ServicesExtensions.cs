@@ -1,6 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using MyCafeBusinessLayer.Interfaces;
+using MyCafeBusinessLayer.Services;
+using MyCafeDAL.UnitOfWork;
 
 namespace MyCafeBusinessLayer.DependencyResolvers.Microsoft
 {
@@ -12,6 +15,9 @@ namespace MyCafeBusinessLayer.DependencyResolvers.Microsoft
 
                 opt.UseSqlServer(str);
             });
+
+            services.AddScoped<IUow, UnitOfWork>();
+            services.AddScoped<IProductService, ProductService>();
         }
 	}
 }
