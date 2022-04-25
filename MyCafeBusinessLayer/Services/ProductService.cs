@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using Entites.Concrete;
 using MyCafe.Dtos.ProductDtos;
 using MyCafeBusinessLayer.Interfaces;
@@ -10,92 +11,67 @@ namespace MyCafeBusinessLayer.Services
 	{
 
         private readonly IUow _uow;
-        public ProductService(IUow uow)
+        private readonly IMapper _mapper;
+
+        public ProductService(IUow uow, IMapper mapper)
         {
             _uow = uow;
+            _mapper = mapper;
         }
 
         public async Task Add(ProductAddDto entity)
         {
-            await _uow.GetRepository<Product>().Add(new()
-            {
-                ProductName = entity.ProductName,
-                Price = entity.Price,
-                ProductImage = entity.ProductImage,
-                ImageUrl = entity.ImageUrl
-            });
-            _uow.SaveChanges();
+            await _uow.GetRepository<Product>().Add(_mapper.Map<Product>(entity));
+            await _uow.SaveChanges();
         }
 
-        public async Task AddWithParams(params ProductListDto[] entity)
+        public async Task AddWithList(List<ProductListDto> entities)
         {
-            throw new NotImplementedException();
+
+            await _uow.GetRepository<Product>().AddWithList(_mapper.Map<List<Product>>(entities));
+            await _uow.SaveChanges();
         }
 
         public async Task<List<ProductListDto>> GetAll()
         {
-            var list =  await _uow.GetRepository<Product>().GetAll();
             
-            var productList = new List<ProductListDto>();
-            if(list!=null && list.Count > 0)
-            {
-                foreach (var product in list)
-                {
-                    productList.Add(new()
-                    {
-                        Id = product.Id,
-                        ProductName = product.ProductName,
-                        Price = product.Price,
-                        ProductImage = product.ProductImage,
-                        ImageUrl = product.ImageUrl
-                    });
-                }
-            }
-            return productList;
+
+            //var productList = new List<ProductListDto>();
+            //if(list!=null && list.Count > 0)
+            //{
+            //    foreach (var product in list)
+            //    {
+            //        productList.Add(new()
+            //        {
+            //            Id = product.Id,
+            //            ProductName = product.ProductName,
+            //            Price = product.Price,
+            //            ProductImage = product.ProductImage,
+            //            ImageUrl = product.ImageUrl
+            //        });
+            //    }
+            //}
+            return _mapper.Map<List<ProductListDto>>(await _uow.GetRepository<Product>().GetAll());
         }
 
         public async Task<ProductListDto> GetById(object id)
         {
-            var product = await _uow.GetRepository<Product>().GetSingle(id);
-            ProductListDto productDto = new ProductListDto
-            {
-                Id = product.Id,
-                Price = product.Price,
-                ProductName = product.ProductName,
-                ProductImage = product.ProductImage,
-                ImageUrl = product.ImageUrl
 
-            };
-
-            return productDto;
+            return _mapper.Map<ProductListDto>(await _uow.GetRepository<Product>().GetByFilter(p=>p.Id==(int)id));
         }
 
-        public async Task Remove(ProductListDto entity)
+        public async Task Remove(object id)
         {
-             _uow.GetRepository<Product>().Remove(new()
-            {
-                Id = entity.Id,
-                ProductName = entity.ProductName,
-                Price = entity.Price,
-                ProductImage = entity.ProductImage,
-                ImageUrl = entity.ImageUrl
 
-            });
-           await _uow.SaveChanges();
+            var removeItem = await _uow.GetRepository<Product>().GetSingle(id);
+            _uow.GetRepository<Product>().Remove(removeItem);
+            await _uow.SaveChanges();
 
         }
 
         public async Task Update(ProductListDto entity)
         {
-            _uow.GetRepository<Product>().Update(new()
-            {
-                Id = entity.Id,
-                ProductName = entity.ProductName,
-                Price = entity.Price,
-                ProductImage = entity.ProductImage,
-                ImageUrl = entity.ImageUrl
-
-            });
+            _uow.GetRepository<Product>().Update(_mapper.Map<Product>(entity));
            await _uow.SaveChanges();
         }
     }

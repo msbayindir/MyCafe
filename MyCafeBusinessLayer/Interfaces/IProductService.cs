@@ -8,9 +8,9 @@ namespace MyCafeBusinessLayer.Interfaces
 		Task<List<ProductListDto>> GetAll();
 		Task Add(ProductAddDto entity);
 		Task<ProductListDto>GetById(object id);
-		Task Remove(ProductListDto entity);
+		Task Remove(object id);
 		Task Update(ProductListDto entity);
-		Task AddWithParams(params ProductListDto[] entity);
+		Task AddWithList(List<ProductListDto> entities);
 	}
 }
 

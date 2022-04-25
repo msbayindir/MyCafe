@@ -11,15 +11,23 @@
     <None Remove="DependencyResolvers\Microsoft\" />
     <None Remove="Services\" />
     <None Remove="Interfaces\" />
+    <None Remove="Mappings\" />
+    <None Remove="Mappings\AutoMapper\" />
+    <None Remove="AutoMapper" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DependencyResolvers\" />
     <Folder Include="DependencyResolvers\Microsoft\" />
     <Folder Include="Services\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Mappings\AutoMapper\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyCafeDAL\MyCafeDAL.csproj" />
     <ProjectReference Include="..\MyCafe.Dtos\MyCafe.Dtos.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
   </ItemGroup>
 </Project>

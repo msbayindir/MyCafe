@@ -10,7 +10,7 @@ namespace MyCafeDAL.Interfaces
 		Task<T> GetSingle(object id);
 		Task Add(T entity);
 		Task<T?> GetByFilter(Expression<Func<T, bool>> filter, bool asNoTracking = false);
-		Task AddWithParams(params T[] entities);
+		Task AddWithList(List<T> entities);
 		void Update(T entity);
 		void Remove(T entity);
 

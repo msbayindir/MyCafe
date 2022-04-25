@@ -21,7 +21,7 @@ namespace MyCafeDAL.Repositories
            await _myCafeDbContext.Set<T>().AddAsync(entity);
         }
 
-        public async Task AddWithParams(params T[] entities)
+        public async Task AddWithList(List<T> entities)
         {
 
             await _myCafeDbContext.Set<T>().AddRangeAsync(entities);
@@ -51,8 +51,10 @@ namespace MyCafeDAL.Repositories
 
         public void Remove(T entity)
         {
+
             _myCafeDbContext.Set<T>().Remove(entity);
         }
+
 
         public void Update(T entity)
         {
