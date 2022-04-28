@@ -17,6 +17,7 @@
     <None Remove="Interfaces\" />
     <None Remove="Repositories\" />
     <None Remove="UnitOfWork\" />
+    <None Remove="MySql.Data.EntityFrameworkCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DbContext\" />

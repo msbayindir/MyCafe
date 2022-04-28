@@ -1,0 +1,93 @@
+﻿@model List<ProductListDto>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 30%;
+            margin-top:auto;
+            margin-bottom: 30px;
+            padding: 0 8px;
+        }
+
+        @@media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+                
+            }
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+        }
+       
+        .container {
+            padding: 0 16px;
+        }
+
+            .container::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+        .title {
+            color: grey;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+
+    <br>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            var base64 = Convert.ToBase64String(item.ProductImage);
+            var imagesrc = string.Format("data:image/gif;base64,{0}", base64);
+
+
+            <div class="column">
+                <div class="card">
+                    <img src="@imagesrc" style="width:100%">
+                    <div class="container">
+                        <h2>@item.ProductName</h2>
+                        <p>@item.Price</p>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+
+           
+
+
+
+        }
+    </div>
+
+
+    </body>
+</html>
+
+
+
+

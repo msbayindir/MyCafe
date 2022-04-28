@@ -1,9 +1,84 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<ProductListDto>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+<div class="text-end my-2">
+    <a asp-action="Create" asp-controller="Home" class="btn btn-primary btn-sm">Yeni Ürün Ekle</a>
 </div>
+
+    @foreach (var item in Model)
+    {
+
+
+
+        var base64 = Convert.ToBase64String(item.ProductImage);
+        var imagesrc = string.Format("data:image/gif;base64,{0}", base64);
+
+
+        <img src="@imagesrc"  width="50" height="50" >
+        
+            
+        
+
+
+        @*<div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+                <div class="bg-white rounded shadow-sm">
+                    <img src="@imagesrc" alt="" class="img-fluid card-img-top">
+                    <div class="p-4">
+                        <h5> <a href="#" class="text-dark">@item.ProductName</a></h5>
+                        <p class="small text-muted mb-0">@item.Price</p>
+                        <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                            <p class="small mb-0"><i class="fa fa-picture-o mr-2"></i><span class="font-weight-bold">JPG</span></p>
+                            <div class="badge badge-danger px-3 rounded-pill font-weight-normal">New</div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+    }
+
+
+
+@*<table class="table table-hovered table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                ProductName
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Image
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.ProductName</td>
+                <td>@item.Price</td>
+                @{
+                    var base64 = Convert.ToBase64String(item.ProductImage);
+                    var imagesrc = string.Format("data:image/gif;base64,{0}", base64);
+                }
+
+                <td>
+                    <img src="@imagesrc" width="50" height="50" alt="Resim Bulunamadı">
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
+
+
 
