@@ -7,6 +7,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+
+        body {
+            background-color: black;
+        }
+        h2 {
+            font-size: 20px;
+            font-style: bold;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #000;
+        }
         html {
             box-sizing: border-box;
         }
@@ -33,6 +43,7 @@
 
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+            background-color: darkgoldenrod;
         }
        
         .container {
@@ -43,10 +54,12 @@
                 content: "";
                 clear: both;
                 display: table;
+                
             }
 
         .title {
             color: grey;
+            
         }
 
         
@@ -68,8 +81,8 @@
                 <div class="card">
                     <img src="@imagesrc" style="width:100%">
                     <div class="container">
-                        <h2>@item.ProductName</h2>
-                        <p>@item.Price</p>
+                        <h2>Product Name:@item.ProductName</h2>
+                        <h2>Price:@item.Price TL</h2>
                     </div>
 
                     
