@@ -6,64 +6,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-
-        body {
-            background-color: black;
-        }
-        h2 {
-            font-size: 20px;
-            font-style: bold;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: #000;
-        }
-        html {
-            box-sizing: border-box;
-        }
-
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .column {
-            float: left;
-            width: 30%;
-            margin-top:auto;
-            margin-bottom: 30px;
-            padding: 0 8px;
-        }
-
-        @@media screen and (max-width: 650px) {
-            .column {
-                width: 100%;
-                display: block;
-                
-            }
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
-            background-color: darkgoldenrod;
-        }
-       
-        .container {
-            padding: 0 16px;
-        }
-
-            .container::after, .row::after {
-                content: "";
-                clear: both;
-                display: table;
-                
-            }
-
-        .title {
-            color: grey;
-            
-        }
-
-        
-    </style>
+    <link href="~/wwwroot/css/ImageCard.css" rel="stylesheet"/>
 </head>
 <body>
 

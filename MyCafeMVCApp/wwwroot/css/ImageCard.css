@@ -1,0 +1,61 @@
+﻿
+
+body {
+    background-color: black;
+}
+
+h2 {
+    font-size: 20px;
+    font-style: bold;
+    font-family: 'Times New Roman', Times, serif;
+    display:"inline-flex";
+    color:darkred;
+    letter-spacing:0.8px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    margin-top: auto;
+    margin-bottom: 30px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+        border-radius: 10px;
+        overflow:hidden;
+    }
+}
+
+.card {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 1);
+    background-color: darkgoldenrod;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+    .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+.title {
+    color: grey;
+}
+
