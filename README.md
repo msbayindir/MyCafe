@@ -24,7 +24,7 @@
 <h3>- Unit Of Work</h3>
 <img align="center" src="https://github.com/msbayindir/MyCafe/blob/master/MyCafeMVCApp/Images/UnitOfWork.png" width="700" height="400" /></h3>
 <h3>- Auto Mapper</h3>
-<img align="center" src="https://github.com/msbayindir/MyCafe/blob/master/MyCafeMVCApp/Images/UnitOfWork.png" width="700" height="400" /></h3>
+<img align="center" src="https://github.com/msbayindir/MyCafe/blob/master/MyCafeMVCApp/Images/AutoMapper.png" width="700" height="400" /></h3>
 
 
 
